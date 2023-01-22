@@ -57,7 +57,7 @@ export const searchSlice = createSlice({
       state.guests = action.payload
     },
     filterStays: (state) => {
-      if (state.location && state.guests) {
+      if (state.location) {
         if (state.location === 'Finland') {
           state.stays = Stays.filter((stay) => stay.maxGuests > state.guests)
           return
